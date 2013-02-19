@@ -26,10 +26,7 @@ class Store(userByName: Map[String, UserRecord], userProfiles: Map[Long, UserPro
     if (userRecord != null) {
       val profile = getUserProfile(userRecord.id)
       if (profile != null) {
-        val interests = profile.interests
-        if (interests != null) {
-          userInterests = interests
-        }
+        userInterests = profile.interests
       }
     }
     userInterests
