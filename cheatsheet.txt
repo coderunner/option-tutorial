@@ -1,0 +1,2 @@
+1- Continuous test with sbt ~test, scala console with sbt compile console
+
