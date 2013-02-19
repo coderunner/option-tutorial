@@ -19,6 +19,6 @@ class TestStore extends FunSuite {
 
   test("should return empty list for missing profile") {
     val store = new Store(userRecordMap, Map())
-    assert(0 === store.retrieveUserInterests("joe").isEmpty)
+    assert(store.retrieveUserInterests("joe").isEmpty)
   }
 }
