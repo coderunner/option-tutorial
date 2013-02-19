@@ -1,2 +1,22 @@
 1- Continuous test with sbt ~test, scala console with sbt compile console
 
+2- Remove val! with if/else Nil
+
+3- Return Option for getUserByName and getUserProfile
+
+4- Use isDefined and get
+
+4- Use map and flatMap
+
+getUserByName(name).flatMap(u => getUserProfile(u.id)).map(p => p.interests).getOrElse(Nil)
+
+5 - Use for-comprehension
+
+def retrieveUserInterests(name: String): List[String] = {
+    (for {
+      u <- getUserByName(name)
+      p <- getUserProfile(u.id)
+    } yield p.interests).getOrElse(Nil)
+  }
+
+6- Use Either[String, List[String]] to propagate error message
